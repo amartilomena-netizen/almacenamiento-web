@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tipos de Almacenamiento de Datos</title>
+  <!-- Tailwind CSS vía CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Encabezado -->
+  <header class="bg-blue-600 text-white p-6 text-center shadow">
+    <h1 class="text-3xl font-bold">Tipos de Almacenamiento de Datos</h1>
+    <p class="text-lg mt-2">Explora, compara y aprende de manera interactiva</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+
+    <!-- Sección filtro -->
+    <section id="filtro" class="space-y-4">
+      <h2 class="text-2xl font-semibold">🔍 Filtro de almacenamiento</h2>
+      <input 
+        id="searchInput" 
+        type="text" 
+        placeholder="Escribe para filtrar tarjetas..." 
+        class="w-full p-2 border rounded-md shadow-sm"
+      >
+    </section>
+
+    <!-- Sección tarjetas -->
+    <section id="tarjetas" class="space-y-4">
+      <h2 class="text-2xl font-semibold">🗂️ Tipos principales</h2>
+      <div id="cardsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <!-- Tarjeta ejemplo -->
+        <div class="card bg-white rounded-2xl shadow p-4" data-name="Almacenamiento Primario">
+          <h3 class="text-xl font-bold mb-2">Almacenamiento Primario</h3>
+          <p class="text-sm">Memoria volátil de acceso rápido (RAM, caché).</p>
+        </div>
+
+        <div class="card bg-white rounded-2xl shadow p-4" data-name="Almacenamiento Secundario">
+          <h3 class="text-xl font-bold mb-2">Almacenamiento Secundario</h3>
+          <p class="text-sm">Discos duros, SSDs, donde se guarda información permanente.</p>
+        </div>
+
+        <div class="card bg-white rounded-2xl shadow p-4" data-name="Almacenamiento Terciario">
+          <h3 class="text-xl font-bold mb-2">Almacenamiento Terciario</h3>
+          <p class="text-sm">Medios de respaldo como cintas magnéticas u ópticos.</p>
+        </div>
+
+        <div class="card bg-white rounded-2xl shadow p-4" data-name="Almacenamiento en la Nube">
+          <h3 class="text-xl font-bold mb-2">Almacenamiento en la Nube</h3>
+          <p class="text-sm">Servicios remotos accesibles por internet (ej: Google Drive).</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección tabla comparativa -->
+    <section id="tabla" class="space-y-4">
+      <h2 class="text-2xl font-semibold">📊 Comparación</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-300 text-sm">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="border px-4 py-2">Tipo</th>
+              <th class="border px-4 py-2">Velocidad</th>
+              <th class="border px-4 py-2">Capacidad</th>
+              <th class="border px-4 py-2">Costo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-2">Primario</td>
+              <td class="border px-4 py-2">Muy alta</td>
+              <td class="border px-4 py-2">Limitada</td>
+              <td class="border px-4 py-2">Alta</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Secundario</td>
+              <td class="border px-4 py-2">Alta</td>
+              <td class="border px-4 py-2">Grande</td>
+              <td class="border px-4 py-2">Moderado</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Terciario</td>
+              <td class="border px-4 py-2">Baja</td>
+              <td class="border px-4 py-2">Muy grande</td>
+              <td class="border px-4 py-2">Bajo</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Nube</td>
+              <td class="border px-4 py-2">Variable</td>
+              <td class="border px-4 py-2">Escalable</td>
+              <td class="border px-4 py-2">Suscripción</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sección glosario -->
+    <section id="glosario" class="space-y-4">
+      <h2 class="text-2xl font-semibold">📖 Glosario</h2>
+      <dl class="space-y-2">
+        <div>
+          <dt class="font-bold">RAM</dt>
+          <dd class="ml-4 text-sm">Memoria de acceso aleatorio, usada para operaciones rápidas.</dd>
+        </div>
+        <div>
+          <dt class="font-bold">SSD</dt>
+          <dd class="ml-4 text-sm">Unidad de estado sólido, almacenamiento secundario veloz.</dd>
+        </div>
+        <div>
+          <dt class="font-bold">Backup</dt>
+          <dd class="ml-4 text-sm">Copia de seguridad de datos almacenados.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Sección quiz -->
+    <section id="quiz" class="space-y-4">
+      <h2 class="text-2xl font-semibold">📝 Quiz rápido</h2>
+      <p>¿Qué tipo de almacenamiento es volátil?</p>
+      <div class="space-x-2">
+        <button onclick="checkAnswer('Primario')" class="bg-blue-500 text-white px-3 py-1 rounded">Primario</button>
+        <button onclick="checkAnswer('Secundario')" class="bg-blue-500 text-white px-3 py-1 rounded">Secundario</button>
+      </div>
+      <p id="quizResult" class="mt-2 font-bold"></p>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-gray-200 text-center p-4 mt-12">
+    <p>© 2025 Proyecto educativo de almacenamiento de datos</p>
+  </footer>
+
+  <!-- Script para filtro y quiz -->
+  <script>
+    // Filtro de tarjetas
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+    searchInput.addEventListener('input', () => {
+      const term = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        card.style.display = name.includes(term) ? 'block' : 'none';
+      });
+    });
+
+    // Quiz
+    function checkAnswer(answer) {
+      const result = document.getElementById('quizResult');
+      if (answer === 'Primario') {
+        result.textContent = "✅ Correcto: El almacenamiento primario es volátil.";
+        result.className = "text-green-600 font-bold mt-2";
+      } else {
+        result.textContent = "❌ Incorrecto. Intenta de nuevo.";
+        result.className = "text-red-600 font-bold mt-2";
+      }
+    }
+  </script>
+</body>
+</html>
